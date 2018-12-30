@@ -1,0 +1,11 @@
+  to do mathematics operation in the coloumn 
+
+select col1,col2,col2+100 from tablename;
+select col1,col2,col2-100 from tablename;
+select col1,col2,col2*100 from tablename;
+select col1,col2,col2/100 from tablename;
+
+  some extra commands are
+
+select col1,col2,col3 from tablename where condition;
+select sname,sperc,sperc+100 from student where sname='vivek';

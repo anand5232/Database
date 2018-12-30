@@ -1,0 +1,8 @@
+Month_between('01-sep-95','11-Jan-94')   result - 19.6774194
+
+round and trunc function can be used for date and month;
+
+round(sysdate,'month')  result  01-aug-03
+
+trunc(sysdate,'month')  result 01-jul-03
+

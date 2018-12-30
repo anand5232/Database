@@ -1,0 +1,26 @@
+synonym ...
+it is use to create the nick name of the 
+table name 
+
+create synonym syn_s1 for stu_557;
+
+drop synonym syn_s1;
+
+
+describe USER_SYNONYM;
+
+
+
+create seqence s1 start with 1;
+create table stu_557(regno number Default s1.NEXTVAl not null, name varchar2(10));
+insert into stu_557(name) values('avi');
+insert into stu_557(name) values('raam');
+
+select * from stu_557;
+
+select * from USER_SEQENCE WHERE SEQUENCE_NAME='s1';
+
+create synonym syn_s1 for stu_557;
+
+drop synonym syn_s1;
+DESCRIBE USER_SYNONYM;

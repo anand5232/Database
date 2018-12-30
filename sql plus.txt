@@ -1,0 +1,45 @@
+connect /AS SYSDBA
+alter pluggable database open
+create user userdb identified by userdb:
+
+Create user username identified by password
+
+
+User system Privileges
+
+Grant create session , create table , create seqence , create
+ view to userdb;
+
+create user alice identified by alice
+
+grant manager to alice:
+
+alter user alice identified by userdb:
+
+grant select
+on employees
+to demo;
+
+
+create table employee(ename varchar2(10), eid number(10),location varchar2(10))
+
+grant select on employee to alice
+
+revoke 
+
+
+Alter Session set NLS_DATE_Format='DD-MON-yyyy HH24:MI:SS';
+
+Alter session set time_zone='-5:00';
+
+select sessiontimezone,LOCALTIMESTAMp from Dual;
+
+select DBTIMEZONE FROM DUAL;
+select SessionTIMEZONE FROM Dual;
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+Loops 
+
+--simple loop 
+declare 
+a number (10):=1;
+begin
+loop
+DBMS-output.put_line('number is'||A);
+exit when a:=10;
+a:=A+1
+end loop
+end;
+
+--while loop
+declare
+a number(10):=1;
+begin
+while(a<=10)
+loop
+Dbms_ouput.put_line('number is '||A);
+A:=a+1;
+end loop;
+end;
+
+--for loop
+begin 
+for a in 1..10
+DBMS_output.put_line('number is'||A);
+end loop;
+end;
+
+
+for loop with exit condition
+--for loop
+begin 
+for a in reverse 1..10
+DBMS_output.put_line('number is'||A);
+end loop;
+end;
+
+cursor
+--using sql%rowcount
+declare
+a number(10)
+
+begin
+delete from employee where empid=23;
+a:=sql%rowcount;
+
+DBMS_output.put_line('total records deleted '||A);
+end;
+
+
+sql%found
+
+
+
+--using sql%found
+declare a number:=&a;
+begin
+delete from employee where empid=a;
+if(sql%found)
+then 
+DBMS_ouput.put_line('delete succesfull');
+else
+DBMS_output.put_line('delete not succesful as no data');
+end if;
+end;
+
+
+If COUNTER=A-1
+Then DBMS_output.put_line("it is prime number');
+else
+dbms_output.put_line('it is not a prime number");
+end if ;
+end;
+
+
+
+

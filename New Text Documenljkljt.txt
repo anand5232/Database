@@ -1,0 +1,18 @@
+create table customer(id number(5),name char(20),age  number(5),salary number(5));
+insert into customer values(3,'zuhair',40,30000);
+select * from customer
+create table orders(id number(20),date varchar(20));
+insert into orders values(1,'22-23-27');
+select id from customer ,orders where .id=orders.id;
+select id,name,amount,date from customers inner join order on customer.id=order.customer.id=orders.customer; 
+select id,name,amount,date from customer left join orders on customer.id=orders.customer.id=orders.customer;
+select id, name, amount, date from customer right join order on customer.id=orders.customer.id=orders.customer;
+
+full join 
+select, id,name,amount ,date from customer full join order on customer.id=order.customer.id=orders.customer;
+
+using union
+
+select id,name,age,salary from customer 
+union
+select oid,odate,customer_id,amount from orders;

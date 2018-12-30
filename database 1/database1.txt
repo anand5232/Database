@@ -1,0 +1,58 @@
+create table employee(fname varchar2(10),lname varchar2(10),salary number(10),empid number(10), deptname varchar2(20),location varchar2(10))
+insert into employee values('ram','Sharma',23000,23,'cse','pnb');
+insert into employee values('Sram','arma',26000,25,'cse','delhi');
+
+subquery
+a query inside another query are known as subquery.
+select fname,lname,salary,from employee where salary>(select salary from employee where fname='SRam');
+
+
+display employee whose jobid is same as empid 25
+
+select fname,lname,empid from employee where jobid=(select jobid from employee where empid=25)
+select fname,lname from employee where salary=min(salary)
+select fname,lname from employee where salary=min(salary)
+);
+
+
+select fname,lname,salary from employee where salary=(select min(salary) from employee
+
+select jobid,min(salary) from employee
+group by jobid
+having min(salary)>
+(select min(salary from employee where jobid=58);
+
+
+
+
+find the job with lowest average salary
+
+
+select job_id,AVG(salary)
+from employee
+group by Job_id
+Having  avg(salary
+
+
+select deptname,avg(salary) from employee
+group by deptname
+having avg(salary)=(select min(avg(salary)) from employee group by deptname)
+
+
+
+single row query 
+
+multiple row subquery 
+here we have three operator 
+"In" "Any" "All" these are operator are used in the multiple row query
+
+select lname,salary,dept_name from employee where salary in (select min(salary) from
+employee group by deptname);
+
+
+aNY Operator ....
+this operator compares a values to each values returned by subquery..
+
+
+
+

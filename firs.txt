@@ -1,0 +1,37 @@
+select * from employee;
+select lower(dname) from employee;
+select upper(dname) from employee;
+select intcap(dname) from employee;
+
+select lower('sql course') from dual;
+
+dual is inbuilt table in sql;
+
+
+character maniplation function 
+
+concat('hello','world')
+
+select concat(deptid,dname) from employee;
+
+select substr('welcome',1,5) from dual;  dual is inbuilt table ;
+
+select length (dname) from employee;
+select length ( avinash) from dual ;
+select instr(dname,'e') from employee;
+
+select lpad(mid,6,'&') from employee;
+select rpad(mid,6,'&') from employee;
+
+
+select replace (dname,'e','x1') from employee;
+
+select trim('c' from dname) from employee;
+
+
+
+
+
+
+
+

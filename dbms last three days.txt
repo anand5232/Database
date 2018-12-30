@@ -1,0 +1,31 @@
+create table employee(ename varchar2(10),empid number(10),salary number(10));
+insert into employee values('ram',12,23000);
+insert into  employee values('sham',23,8900);
+insert into employee values('sita',34,45625);
+
+create or replace procedure
+raise_salary(p_empa employee.empid%type)
+is
+vsal employee.salary%type;
+begin
+
+select salary into vsal from employee where empid=p_empno;
+f vsal<2000 then
+update employee
+set salary=salary+vsal*0.1 where empid=p_empno;
+and if;
+when no_data found then
+dbms_output.put_line('employee does not exist');
+dbms_output.put_line('employee does not exist');
+end raise salary
+
+begin
+raise_salary(34)
+end;
+
+execute raise_salary(
+
+
+
+
+

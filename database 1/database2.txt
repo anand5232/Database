@@ -1,0 +1,32 @@
+describe dictionary;
+describe dictionary;
+	select * from dictionary
+
+in the dictionary table we have table name and 
+comment related to that table 
+
+select *
+from dictionary 
+WHERE table name = 'user_object'
+
+describe user Object;
+
+describe user_table
+
+
+describe dictionary;
+	select * from dictionary
+
+
+constrain information
+
+
+
+adding comment to table
+
+you can add comment to table or column by using comment
+statement
+
+comment on table employee
+Is 'Employee Information';
+select object_name,ddl_time from User_object

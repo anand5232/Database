@@ -1,0 +1,23 @@
+looping statement
+cursor
+control statement
+
+--using %type and record
+
+declare
+type T_emprec is record
+( 
+ ename employee.ename%type;
+ sal employee.salary%type;
+);
+r_empcerc T_emper
+cursor c1 is select ename,salary from employee;
+
+begin
+open c1;
+loop
+fetch c1 into r_emprec;found;
+exit when c1%notFOUND;
+DBMS_output.put_line(r_emprec.ename || r_emprec.salary);
+end loop;
+close c1;

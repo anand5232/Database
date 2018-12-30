@@ -1,0 +1,26 @@
+  to create table 
+
+create table student(sname varchar(10),sroll number(10),sperc number(10));
+
+
+
+
+  to insert the values into the table
+
+insert into student values('anand',35,70);
+
+
+
+
+  to view the particular coloumn name and its all values
+select coloumn name from tablename; 
+
+
+
+ to view all table rows and coloumn then
+select * from tablename
+
+
+
+select coloumn names  from tablename where condition 
+`

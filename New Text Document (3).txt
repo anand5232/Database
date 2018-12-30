@@ -1,0 +1,18 @@
+--out parameter 
+create or replace procedure query_emp
+(p_empid IN employee.empid%type,
+p_ename out employee.ename%type,
+p_sal out employee.salary%type)
+
+is 
+
+begin
+
+select ename,salary into p_ename ,p_sal from employee
+here empid=P_empid;
+
+exception
+when no_data_found
+then
+raise_application_error(-20001,'emp does not exist');
+end query_emp ;

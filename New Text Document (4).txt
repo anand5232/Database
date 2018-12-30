@@ -1,0 +1,30 @@
+select ename, salary into p_ename,p_sal from employee
+where empid=p_empid;
+
+exception 
+when no_data_found
+then
+raise_application_error(-20001,'emp does not exist');
+end query_emp;
+
+execute
+variable name varchar2(20);
+variable sal number(10);
+
+execute query_emp(25,:name,:sal);
+print name sal;
+
+
+
+dbms_output.put_line(sqlerrm);
+end;
+
+--how to use 
+declare
+cursor updated_sal is selected empid, salary from employee;
+pre_sal 
+
+
+
+wha
+

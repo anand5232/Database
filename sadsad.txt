@@ -1,0 +1,28 @@
+create table customer(name varchar2(10), id number(10), address varchar2(20));
+insert into customers values('avi',12,'ldh');
+insert into customer values('ram',45,'delhi');
+declare
+  c_id customer.id%type := &cc_id;
+  c_name customer.Name%type ;
+  c_addr customer.address%type;
+  --user defined exception
+  ex_invalid_id Exception
+
+IF c_id <= 0 then
+raise ex_invalid_id;
+else
+ select name, address Into c_name,caddr
+from customer
+where id=c_id;
+DBMS_output.put_line('name :'||c_name);
+Dbms_output.putline('address :'||c_addr);
+end if;
+
+exception
+ when ex_invalid_id then
+   dbms_output.put_line('ID must be greater than zero ");
+when no_data found then
+  dbms_output.put_line('no such customer!');
+when other Then
+  dbms_output.put_line('error');
+end;

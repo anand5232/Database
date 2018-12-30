@@ -1,0 +1,44 @@
+--cursor while loop
+declare
+cursor c2 is select empid ,ename from employee;
+v_empid employee.empid%type:
+v_ename employee.ename%type;
+
+begin 
+open c2;
+fetch c2 into v_empid,v_ename;
+while c2%found and c2%Rowcount
+loop
+DBMS_output.put_line('employee name is '||v_ename||'employee id is '||v_empid);
+end loop;
+close c2;
+end;
+
+create table department(deptid number(10), locationid number(10),deptname varchar(10));
+--cursor for loop
+declare 
+cursor c3 is select empid,ename,salary,department.deptid
+from employee,department
+where employee.empid=department.deptid;
+begin
+for v_rec in c3
+loop
+dbms_output.put_line('name'||v_rec.ename||'empldoyeeid'||v_rec.empid||departmentid'||v_rec.deptid);
+end loop
+end;
+
+create table emp_history(my number(10),myhiredate date)
+declare
+cursor c4 is select empid, hiredate from employee11
+where hiredate<sysdate-7 for update;
+begin
+for emp_rec in c4
+loop
+insert into emp_history values
+(emp_rec.empid,emp_rec.hiredate);
+delete from employee11 where current of  c4
+(em_rec.empid,emp_rec.hiredate);
+end loop;
+end;
+
+

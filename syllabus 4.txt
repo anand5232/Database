@@ -1,0 +1,10 @@
+index
+
+view
+
+exist
+
+not exist
+
+comaprison
+

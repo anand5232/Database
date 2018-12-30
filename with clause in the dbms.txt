@@ -1,0 +1,9 @@
+ with
+ dept_cost as( select d.deptname,Sum(e.salary) AS dept_total
+ from employee e JOIN department d
+ ON e.deptid=d.deptid
+ GROUP BY d.deptname),
+ avg_cost AS (
+ select SUM(dept_total)/COUNT(*) As dept_avg from dept_costs)
+ select * from dept_cost where dept_total>(select dept_avg from avg_cost)
+ ORDER by deptname;

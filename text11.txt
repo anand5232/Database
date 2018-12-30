@@ -1,0 +1,19 @@
+create table emp_14557
+(eid varchar2(10),hire_date date,salary number(10),manager_id varchar2(10));
+
+insert into emp_14557 values('11','30-oct-14',2300,23);
+insert into emp_14557 values('12','24-oct-14',2400,24);
+
+create table sal_history(eid varchar2(10), hire_date date,salary number(10));
+create table mgr_history(eid varchar2(10),manager_id varchar2,salary number(10);
+
+insert all
+into sal_history values(empid,hiredate,sal)
+into mrg_history values(empid,mgr,sal)
+select eid EMPID,hire_date HIREDATE 
+salary sal
+
+insert first
+when salary<2100 then
+into sal_low values(eid,salary)
+when salary between 2200 and 2500 then

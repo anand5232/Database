@@ -1,0 +1,44 @@
+nested function
+
+f3(f2(f1(values)));
+
+select locid,dname,upper(concat(substr(dname,1,2),'_TY')) from employee; 
+
+number function 
+
+round(45.926,2)  result 45.93
+trunc(45.926,2)  result 45.9
+
+select round(45.926,2) from dual ;
+select trunc(45.926,2) from dual;
+
+dual is public table that you can use to view result from function and calculation.
+
+mod()
+
+
+sysdate -  system date 
+select sysdate() from dual;
+
+
+date+number = it adds a numbers of day to a d ate
+date-number=
+date-date
+date-number/24 = it give us total hour;
+
+select dname (sysdate-hdate)/7 as weeks from employee;
+
+as weeks - weeks is coloumn name;
+
+function related to calender or month
+all these function can be use by dual table ;
+monts_between()
+add_month()
+next_day()
+last_day()
+
+
+
+
+
+

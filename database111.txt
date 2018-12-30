@@ -1,0 +1,15 @@
+declare
+v_location employee.location%type;
+emp_rec employee%rowtype;
+begin
+V_location:= '&location';
+select * into emp_rec from employee where upper
+(location)=upper(v_location);
+dbms_output.put_line(emp_rec.ename || 'has salary'|| emp_rec.salary);
+exception
+when no_data_found
+then DBMS _output.put_line('no location exist');
+when too_many_rows
+then dbms_output_line('more then one employee');
+when others
+then DBMS_output.put_line('other error');

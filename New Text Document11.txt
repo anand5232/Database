@@ -1,0 +1,8 @@
+create table department(deid number(10),dename varchar(10),mnid number(10),loid number(10));
+insert into department values(1212,'mec',1412,1329);
+insert into department(deid,dename,mnid,loid) values(2121,'ece',2232,5737);
+alter table department add hire_date date;
+insert into department values(&deid,'&dename',&mnid,&loid,'&hire_date');
+insert into department1(select deid,dename,mnid,loid,hire_date from department);
+update department set deid=2222 where dename='math';
+update department set(mnid,loid)=(select mnid,loid from department where deid=1212) where deid=2121;
